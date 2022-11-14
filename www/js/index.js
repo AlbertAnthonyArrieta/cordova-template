@@ -18,7 +18,12 @@ function onDeviceReady() {
 
     function onSuccess(imageData) {
         console.log(imageData);
-        $("#myimg").attr("src", imageData);
+        resolveLocalFileSystemURL(imageData, function (fileEntry) {
+            var myNewImage = fileEntry.toURL()
+            console.log(myNewImage);
+            // do something with URL, assign to src or create an html
+            $("#akePic").after("<img src='" + myNewImage + ";>")
+        }, onError);
     }
 
     function onError() {
