@@ -37,16 +37,52 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/framework7-bundle.min.css" />
     <title>Template</title>
 </head>
 
-<body>
+<body class="dark">
+    <div id="app">
+         <div class="view view-main">
+            <div data-name="home" class="page">
 
-    <button id="takePhoto">Take a Photo</button>
+              <div class="page-content">
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                      <div class="left">
+                        <a class="link back">
+                        </a>
+                      </div>
+                      <div class="title">Just Another Photo App</div>
+                      <div class="right"></div>
+                    </div>
+                  </div>
+
+                  <div class="result-container">
+                      <img id="result"></img>
+                      <h1 id="resultText"></h1>
+                  </div>
+                  
+                  <div class="button-container">
+                      <button class="col button button-raised button-fill button-round" id="takePhoto">Take a Photo</button>
+                  </div>
+                  
+                </div>
+                  
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  
 
     <script src="cordova.js"></script>
+    <script src="js/framework7-bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/frameworkscript.js"></script>
 </body>
 
 </html>
